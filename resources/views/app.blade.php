@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="lofi">
+<html data-theme="night">
 
 <head>
     <meta charset="utf-8" />

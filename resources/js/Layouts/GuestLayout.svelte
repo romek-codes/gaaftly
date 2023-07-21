@@ -1,20 +1,14 @@
 <script>
-    import { Link } from "@inertiajs/svelte";
+    import { Link , page} from "@inertiajs/svelte";
     import ApplicationLogo from "../Components/ApplicationLogo.svelte";
+    import Navbar from "@/Components/Navbar.svelte";
+    export let canLogin, canRegister;
 </script>
 
 <div
-    class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100"
+    class="min-h-screen flex flex-col"
 >
-    <div>
-        <Link href="/">
-            <ApplicationLogo classes="w-20 h-20 fill-current text-gray-500" />
-        </Link>
-    </div>
+    <Navbar canLogin={canLogin} canRegister={canRegister} user={$page.props.auth.user}></Navbar>
 
-    <div
-        class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg"
-    >
-        <slot />
-    </div>
+    <slot />
 </div>

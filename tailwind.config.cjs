@@ -23,8 +23,8 @@ module.exports = {
     ],
     daisyui: {
         themes: [
-          "lofi",
-          "black",
+          "cmyk",
+          "night",
         ],
       },
 };
