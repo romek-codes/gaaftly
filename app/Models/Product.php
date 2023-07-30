@@ -16,13 +16,13 @@ class Product extends Model
         return $this->hasMany(ProductImage::class);
     }
 
-    public function target_groups()
+    public function targetGroups()
     {
-        return $this->belongsToMany(TargetGroup::class, 'Product_TargetGroup');
+        return $this->belongsToMany(TargetGroup::class, 'product_target_groups');
     }
 
     public function categories()
     {
-        return $this->belongsToMany(Category::class, 'Product_Category');
+        return $this->belongsToMany(Category::class, 'product_categories');
     }
 }

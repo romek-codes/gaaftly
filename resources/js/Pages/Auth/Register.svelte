@@ -28,7 +28,7 @@
     <title>Register</title>
 </svelte:head>
 
-<form on:submit|preventDefault={submit}>
+<form on:submit|preventDefault={submit} class="mx-6">
     <div>
         <InputLabel for="name" value="Name" />
 

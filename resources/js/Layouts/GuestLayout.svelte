@@ -9,6 +9,5 @@
     class="min-h-screen flex flex-col"
 >
     <Navbar canLogin={canLogin} canRegister={canRegister} user={$page.props.auth.user}></Navbar>
-
     <slot />
 </div>

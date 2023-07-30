@@ -35,7 +35,7 @@
     </div>
 {/if}
 
-<form on:submit|preventDefault={submit}>
+<form on:submit|preventDefault={submit} class="mx-6">
     <div>
         <InputLabel for="email" value="Email" />
 

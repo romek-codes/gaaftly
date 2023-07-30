@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\Support\Facades\Log;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
 
 use Illuminate\Http\Request;
 
@@ -14,6 +16,13 @@ class ProductController extends Controller
      */
     public function index()
     {
+        $products_paginated = Product::with(['images', 'targetGroups', 'categories'])->paginate(10);
+
+        return Inertia::render('Welcome', [
+            'canLogin' => Route::has('login'),
+            'canRegister' => Route::has('register'),
+            'products' => $products_paginated
+        ]);
     }
 
     /**

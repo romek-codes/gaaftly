@@ -10,4 +10,9 @@ class TargetGroup extends Model
     protected $guarded = ['id'];
 
     use HasFactory;
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'product_target_groups');
+    }
 }
