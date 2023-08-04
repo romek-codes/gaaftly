@@ -16,12 +16,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products_paginated = Product::with(['images', 'targetGroups', 'categories'])->paginate(10);
-
         return Inertia::render('Welcome', [
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
-            'products' => $products_paginated
+            'products' => Product::with(['images', 'targetGroups', 'categories'])->paginate(8),
         ]);
     }
 

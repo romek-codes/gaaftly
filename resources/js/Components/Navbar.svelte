@@ -1,7 +1,7 @@
 <script>
     import { Link, page } from "@inertiajs/svelte";
     import ApplicationLogo from "@/Components/ApplicationLogo.svelte";
-    import ChangeTheme from "@/Components/ChangeTheme.svelte"
+    import ChangeTheme from "@/Components/ChangeTheme.svelte";
     export let canLogin, canRegister, user;
 </script>
 
@@ -32,10 +32,10 @@
                 <li><a>About</a></li>
             </ul>
         </div>
-        <ChangeTheme></ChangeTheme>
+        <ChangeTheme />
     </div>
     <div class="navbar-center">
-        <ApplicationLogo></ApplicationLogo>
+        <ApplicationLogo />
     </div>
     <div class="navbar-end">
         {#if canLogin}
@@ -48,18 +48,16 @@
                     >
                 {:else}
                     {#if canLogin}
-                        <Link
-                            href={route("login")}
-                            class=""
-                            ><button class="hover:text-white">Login</button></Link
+                        <Link href={route("login")} class=""
+                            ><button class="hover:text-white">Login</button
+                            ></Link
                         >
                     {/if}
 
                     {#if canRegister}
-                        <Link
-                            href={route("register")}
-                            class=""
-                            ><button class="hover:text-white">Register</button></Link
+                        <Link href={route("register")} class=""
+                            ><button class="hover:text-white">Register</button
+                            ></Link
                         >
                     {/if}
                 {/if}
