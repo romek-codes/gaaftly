@@ -4,7 +4,6 @@
 
 <script>
     import Products from "@/Components/Products.svelte";
-    import Test from "@/Components/Test.svelte";
 </script>
 
 <svelte:head>
@@ -12,7 +11,6 @@
 </svelte:head>
 
 <div class="min-h-screen flex flex-wrap justify-center">
-    <Test />
-    <!-- <Products /> -->
+    <Products />
     <!-- <Pagination links={products.links} /> -->
 </div>
