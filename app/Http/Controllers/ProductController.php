@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
+use App\Models\TargetGroup;
 use Illuminate\Support\Facades\Log;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +22,8 @@ class ProductController extends Controller
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
             'products' => Product::with(['images', 'targetGroups', 'categories'])->paginate(8),
+            'categories' => Category::all(),
+            'target_groups' => TargetGroup::all(),
         ]);
     }
 

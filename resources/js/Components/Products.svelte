@@ -4,6 +4,26 @@
     import VirtualList from "svelte-tiny-virtual-list";
     import InfiniteLoading from "svelte-infinite-loading";
     import Card from "@/Components/Card.svelte";
+    import { onMount, onDestroy } from "svelte";
+
+    let dynamicItemSize;
+
+    const updateDynamicItemSize = () => {
+        if (window.innerWidth <= 768) {
+            dynamicItemSize = 600;
+        } else {
+            dynamicItemSize = 350;
+        }
+    };
+
+    onMount(() => {
+        window.addEventListener("resize", updateDynamicItemSize);
+        updateDynamicItemSize(); // initial setting
+    });
+
+    onDestroy(() => {
+        window.removeEventListener("resize", updateDynamicItemSize);
+    });
 
     let items = $page.props.products.data;
 
@@ -29,7 +49,13 @@
     }
 </script>
 
-<VirtualList width="100%" height={1200} itemCount={items.length} itemSize={350}>
+<VirtualList
+    width="100%"
+    height={1200}
+    itemCount={items.length}
+    itemSize={dynamicItemSize}
+    class="grow"
+>
     <div slot="item" let:index let:style {style}>
         <Card
             productImages={items[index].images}
