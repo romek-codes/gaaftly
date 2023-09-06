@@ -28,6 +28,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class Category extends \Eloquent {}
 }
@@ -60,6 +61,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereProductStore($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereProductUrl($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class Product extends \Eloquent {}
 }
@@ -81,6 +83,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCategory whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCategory whereProductId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductCategory whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class ProductCategory extends \Eloquent {}
 }
@@ -104,6 +107,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|ProductImage whereProductId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductImage whereProductImageUrl($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductImage whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class ProductImage extends \Eloquent {}
 }
@@ -125,6 +129,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|ProductTargetGroups whereProductId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductTargetGroups whereTargetGroupId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductTargetGroups whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class ProductTargetGroups extends \Eloquent {}
 }
@@ -147,6 +152,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|TargetGroup whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TargetGroup whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TargetGroup whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class TargetGroup extends \Eloquent {}
 }
@@ -179,6 +185,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class User extends \Eloquent {}
 }
