@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property int $product_id
  * @property int $target_group_id
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|ProductTargetGroups newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ProductTargetGroups newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ProductTargetGroups query()
@@ -21,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|ProductTargetGroups whereProductId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductTargetGroups whereTargetGroupId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductTargetGroups whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class ProductTargetGroups extends Model

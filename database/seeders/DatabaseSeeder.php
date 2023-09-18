@@ -32,5 +32,4 @@ class DatabaseSeeder extends Seeder
             $product->categories()->attach(Category::all()->random()->id);
         });
     }
-
 }

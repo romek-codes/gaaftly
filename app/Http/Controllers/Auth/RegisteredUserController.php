@@ -23,7 +23,7 @@ class RegisteredUserController extends Controller
     {
         return Inertia::render('Auth/Register', [
             'products' => [],
-    ]);
+        ]);
     }
 
     /**

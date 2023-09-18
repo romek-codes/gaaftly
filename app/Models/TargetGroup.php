@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $name
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Product> $products
  * @property-read int|null $products_count
+ *
  * @method static \Database\Factories\TargetGroupFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|TargetGroup newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TargetGroup newQuery()
@@ -22,6 +23,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|TargetGroup whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TargetGroup whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TargetGroup whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class TargetGroup extends Model

@@ -5,11 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\TargetGroup;
-use Illuminate\Support\Facades\Log;
-use Inertia\Inertia;
-use Illuminate\Support\Facades\Route;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 class ProductController extends Controller
 {

@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $product_image_url
  * @property int $product_id
  * @property-read \App\Models\Product $product
+ *
  * @method static \Database\Factories\ProductImageFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|ProductImage newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ProductImage newQuery()
@@ -23,6 +24,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|ProductImage whereProductId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductImage whereProductImageUrl($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductImage whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class ProductImage extends Model
