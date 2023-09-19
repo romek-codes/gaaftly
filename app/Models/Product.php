@@ -2,24 +2,28 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Models\Product
  *
  * @property int $id
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
  * @property string $name
  * @property string $description
  * @property string $product_store
  * @property string $product_url
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Category> $categories
+ * @property-read Collection<int, Category> $categories
  * @property-read int|null $categories_count
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\ProductImage> $images
+ * @property-read Collection<int, ProductImage> $images
  * @property-read int|null $images_count
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\TargetGroup> $targetGroups
+ * @property-read Collection<int, TargetGroup> $targetGroups
  * @property-read int|null $target_groups_count
  *
  * @method static \Database\Factories\ProductFactory factory($count = null, $state = [])
@@ -38,21 +42,33 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Product extends Model
 {
+    /**
+     * @var string[]
+     */
     protected $guarded = ['id'];
 
     use HasFactory;
 
-    public function images()
+    /**
+     * @return HasMany<ProductImage>
+     */
+    public function images(): HasMany
     {
         return $this->hasMany(ProductImage::class);
     }
 
-    public function targetGroups()
+    /**
+     * @return BelongsToMany<TargetGroup>
+     */
+    public function targetGroups(): BelongsToMany
     {
         return $this->belongsToMany(TargetGroup::class, 'product_target_groups');
     }
 
-    public function categories()
+    /**
+     * @return BelongsToMany<Category>
+     */
+    public function categories(): BelongsToMany
     {
         return $this->belongsToMany(Category::class, 'product_categories');
     }
