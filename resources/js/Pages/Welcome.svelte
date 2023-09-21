@@ -4,7 +4,6 @@
 
 <script>
     import Products from "@/Components/Products.svelte";
-    import Filter from "@/Components/Filter.svelte";
 </script>
 
 <svelte:head>
@@ -12,7 +11,6 @@
 </svelte:head>
 
 <div class="min-h-screen flex flex-row justify-center">
-    <Filter />
     <Products />
     <!-- <Pagination links={products.links} /> -->
 </div>

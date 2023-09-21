@@ -49,14 +49,13 @@
     }
 </script>
 
+<!-- If centering really doesnt work just use 24rem as width -->
 <VirtualList
     width="100%"
     height={1200}
     itemCount={items.length}
-    itemSize={dynamicItemSize}
-    class="grow"
->
-    <div slot="item" let:index let:style {style}>
+    itemSize={dynamicItemSize} >
+    <div class="flex justify-center" slot="item" let:index let:style {style}>
         <Card
             productImages={items[index].images}
             productName={items[index].name}
